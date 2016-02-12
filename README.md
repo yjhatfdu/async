@@ -1,7 +1,9 @@
 # 说明
-### 随手撸了个async,肯定不是很靠谱
-### 函数内部使用await(func():Promise) 来仿造 es7的await func():Promise
-### 使用asyncFunction=async(rawFunction) 来处理以后就可以直接调用asyncFunction(),返回值是一个Promise
+- 随手撸了个async,肯定不是很靠谱
+- 函数内部使用await(func():Promise) 来仿造 es7的await func():Promise
+- 使用asyncFunction=async(rawFunction) 来处理以后就可以直接调用asyncFunction(),返回值是一个Promise
+
+###Demo
 ```JavaScript
     function someAsyncCode(arg) {
         return new Promise(function (resolve) {
