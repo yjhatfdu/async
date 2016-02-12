@@ -61,24 +61,3 @@ declare function await(p:Promise<any>);
 function asyncRun(func){
     async(func)()
 }
-
-function someAsyncCode(arg) {
-    return new Promise(function (resolve) {
-        setTimeout(function () {
-            resolve(arg)
-        }, 1000);
-    })
-}
-
-function test(a1) {
-    var a2 = await(someAsyncCode(a1));
-    console.log(1);
-    var a3 = await(someAsyncCode(a2));
-    console.log(2);
-    return a3;
-}
-//
-var testAsync = async(test);
-
-
-testAsync(2333333).then((result)=>console.log(result));

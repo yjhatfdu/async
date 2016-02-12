@@ -44,11 +44,10 @@ function async(func) {
     switchBlock += getSwitchBlock(rightPart, '', stage);
     var returnFunc = "return function(" + funcArgs + "){var __stage=0;var __resolve;" + variableList.map(function (item) { return 'var ' + item; }).join(';') + ";\n\tfunction __wrapper(){switch (__stage){" + switchBlock + "}}var __promise = new Promise(function(r){__resolve=r;});\n\t   __wrapper();return __promise;}";
     return (new Function(returnFunc))();
+    var _a;
 }
-
+//demo
 function asyncRun(func) {
     async(func)();
 }
-
-
 //# sourceMappingURL=async.js.map
